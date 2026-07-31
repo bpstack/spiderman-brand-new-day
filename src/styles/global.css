@@ -86,6 +86,10 @@
 		margin: 0;
 		width: 100%;
 		min-height: 100%;
+		/* El `overflow-x` de `html` se propaga al viewport y deja a `html` como
+		   `visible`, así que no recorta a sus descendientes. Repetirlo aquí sí
+		   contiene el desbordamiento (el tilt 3D del footer ensancha su caja). */
+		overflow-x: clip;
 	}
 
 	/* Anton solo existe a 400: forzar peso y bloquear faux-bold. */
